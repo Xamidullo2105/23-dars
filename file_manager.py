@@ -10,13 +10,12 @@ def read(filename: str) -> list:
 
 def write(filename: str, data: list, mode: str = "w") -> None:
     path = f"data/{filename}"
-
     os.makedirs("data", exist_ok=True)  
-
     with open(file=path, mode=mode, encoding="UTF-8", newline="") as file:
         writer = csv.writer(file)
-
         if mode == "w":
             writer.writerows(data) 
         else:
-            writer.writerow(data) 
+            writer.writerow(data)
+
+
